@@ -240,3 +240,47 @@ Some usual parameters in `table` tag is put in the underneath table
 | `thead` | Define table page's head |
 | `tbody` | Define table's body |
 | `tfoot` | Define table page's foot |
+
+## 14 Form
+
+Tag `form` is used to create a field for users to interaction. The most widely used element in `form` is `input`. For instance
+
+```html
+<form action="">
+    Username: <input type="text" name="user"><br>
+    Password: <input type="password" name="password">
+</form>
+```
+
+The code will generate two text field with on to input *username* and another to input *password*.
+
+There are lots of types to option for `input`. We can create a radio button like this
+
+```html
+<form action="">
+    <input type="radio" name="sex" value="male">male<br>
+    <input type="radio" name="sex" value="female">female
+</form>
+```
+
+And create a checkbox like this
+
+```html
+<form>
+    <input type="checkbox" name="vehicle" value="Bike">I love bycycle.<br>
+    <input type="checkbox" name="vehicle" value="Car">I love cars.
+</form>
+```
+
+We can submit what we input in `form` by a `submit` button. For instance
+
+```html
+<form name="input" action="html_form_action.php" method="get">
+    Username: <input type="text" name="user"><input type="submit" value="Submit">
+</form>
+```
+
+The `action` means what the server would do to the data you submit, and the `method` means the method the data submit to the server. Generately, it has two choice to choose, `get` and `post`.
+
+You can navigate [Html Form(Chinese)](https://www.runoob.com/html/html-forms.html) for more element used in `form`.
+
