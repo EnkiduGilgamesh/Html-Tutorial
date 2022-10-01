@@ -15,11 +15,11 @@ HTML could be simply divided into two hands in which there are tags and text.
 In HTML, tags are denoted by tag's name and the surrounding symbol `<` and `>`
 Every element in HTML is consist of head tag and foot tag. For instance
 
-```heml
+```html
 <div>element</div>
 ```
 
-## 2 DOCtYPE Declaration
+## 2 DOCTYPE Declaration
 
 `<!DOCTYPE>` is used in the headmost part of the HTML file whose function is to declare which version of HTML you are creating.
 
@@ -67,8 +67,8 @@ In HTML, we can comment our code like underneath
 Heading is the essential part in our writing. HTML has six different levels of heading. They can be denoted by `<h1>` ~ `<h6>`. The smaller the number is, the bigger the number is.
 
 ```html
-<h1>Heading 1</h>
-    <h2>Subheading 1</h>
+<h1>Heading 1</h1>
+    <h2>Subheading 1</h2>
 ```
 
 In addition, `<hr>` donates a horizontal line, which is ofen used following the heading.
@@ -117,6 +117,12 @@ Browser can reinforce text into differnt format. We just need to tell which kind
 | `sup` | Superscript |
 | `ins` | Insert |
 | `del` | Delete |
+
+For instance
+
+```html
+<b>NOTICE</b>: ...
+```
 
 To other format, please navigate [HTML Text Format(Chinese)](https://www.runoob.com/html/html-formatting.html)
 
