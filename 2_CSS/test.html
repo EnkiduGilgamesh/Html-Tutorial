@@ -1,11 +1,11 @@
 <!--
-File: \text.htm
+File: \test.html
 Project: 2_CSS
 Created Date: Saturday Oct 1st 2022, 5:04:03 pm
 Author: Wenren Muyan
 Comments: 
 --------------------------------------------------------------------------------
-Last Modified: 1/10/2022 05:07:6
+Last Modified: 5/10/2022 10:48:49
 Modified By: Wenren Muyan
 --------------------------------------------------------------------------------
 Copyright (c) 2022 - future Wenren Muyan
@@ -24,11 +24,32 @@ Date				By				Comments
         <style>
             div{width: 200px; 
                 height: 200px;
+                background: blue;
+            }
+            .style_class{width: 200px; 
+                height: 200px;
+                background: yellow;
+            }
+            #style_ID{width: 200px; 
+                height: 200px;  
                 background: red;
+            }
+            .Margin{
+                margin-top: 10px;
+                margin-left: 10px;
+                margin-right: 10px;
+                margin-bottom: 10px;
+            }.Padding{
+                padding-top: 10px;
+                padding-right: 10px;
+                padding-bottom: 10px;
+                padding-left: 10px;
             }
         </style>
     </head>
     <body>
-        <div>Test</div>
+        <div >Test</div>
+        <div id = 'style_ID' class = 'Padding'>Test</div>
+        <div class = 'style_class Margin'>Test</div>
     </body>
 </html>
