@@ -5,7 +5,7 @@ Created Date: Saturday Oct 1st 2022, 5:04:03 pm
 Author: Wenren Muyan
 Comments: 
 --------------------------------------------------------------------------------
-Last Modified: 9/10/2022 04:36:19
+Last Modified: 10/10/2022 06:37:13
 Modified By: Wenren Muyan
 --------------------------------------------------------------------------------
 Copyright (c) 2022 - future Wenren Muyan
@@ -65,13 +65,73 @@ Date				By				Comments
                 background-position: 500px 200px;
                 background-repeat: no-repeat;
             }
+            .fontTem{
+                font-size: 18px;
+                color: red;
+                font-weight:bold;
+                font-family: "Microsoft Yahei";
+            }
+            .divTem{
+                height: 200px;
+                width: 200px;
+                background: blue;
+                float: left;
+            }
+            .positionRTem{
+                height: 200px;
+                width: 200px;
+                background: red;
+                float: left;
+                position: relative;
+                top: 50px;
+                left: 50px;
+            }
+            .positionATem{
+                height: 200px;
+                width: 200px;
+                background: red;
+                position: absolute;
+                top: 50px;
+                left: 50px;
+            }
+            .positionFTem{
+                height: 200px;
+                width: 200px;
+                position: fixed;
+                background: green;
+                float: left;
+                top: 150px;
+                left: 150px;
+            }
+            .divNone{
+                height: 100px;
+                width: 100px;
+                background: yellow;
+            }
         </style>
-        <!-- background-repeat: repeat-x; -->
     </head>
     <body>
+        <h1>Selector</h1>
         <div >Test</div>
         <div id = 'style_ID' class = 'Padding'>Test</div>
         <div class = 'style_class Margin borderTem2'>Test</div>
         <div class = "imageTem"></div>
+
+        <h1>Font</h1>
+        <div>
+            <p>
+                This is text with default size and color.
+            </p>
+            <p class = 'fontTem'>
+                This is text with specified size and color.
+            </p>
+        </div>
+
+        <h1>Position</h1>
+        <div class = 'positionRTem'></div>
+        <div class = 'divTem'></div>
+        <div class = 'positionATem'></div>
+        <div class = 'divTem'></div>
+        <div class = 'positionFTem'></div>
     </body>
 </html>

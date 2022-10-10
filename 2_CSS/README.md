@@ -11,6 +11,20 @@
     - [3.2 float](#32-float)
     - [3.3 border](#33-border)
     - [3.4 background](#34-background)
+  - [4 Font](#4-font)
+    - [4.1 Font Size](#41-font-size)
+    - [4.2 Font Weight](#42-font-weight)
+    - [4.3 Font Family](#43-font-family)
+    - [4.4 Line Height](#44-line-height)
+    - [4.5 Font Style](#45-font-style)
+    - [4.6 Font Variant](#46-font-variant)
+  - [5 Position](#5-position)
+    - [5.1 Relative Position](#51-relative-position)
+    - [5.2 Absolute Position](#52-absolute-position)
+    - [5.3 Fixed Position](#53-fixed-position)
+    - [5.4 Inherit Position](#54-inherit-position)
+    - [6 Display](#6-display)
+  - [7 Relative Unit](#7-relative-unit)
 
 ## 1 Introduce
 
@@ -301,6 +315,28 @@ While `padding` is the internal distance between a block with its border. Its us
 </html>
 ```
 
+In `html` the whole page has a default margin and padding. We can reset it 0 like this
+
+```html
+<style>
+    html{
+        margin: 0;
+        padding: 0;
+    }
+</style>
+```
+
+Or use `*` to select all the element
+
+```html
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+</style>
+```
+
 ### 3.2 float
 
 A block element's width is defaultly defined 100% as wide as a web page. So a block element will be defaulty put under another block element. After we define the width of a block, there may be empty space in that line. Using the `float` property will make the block try to align in the same line firstly. There are two parameters, `left` and `right`, meaning align at the direction. For instance
@@ -451,3 +487,408 @@ We can also control the position the image appear in the `div`.
 ```
 
 The property has tow parameter with the second one controlling the y axis and default being set `center`.
+
+## 4 Font
+
+Fonts are one of the essential elements in a web page.
+
+### 4.1 Font Size
+
+We can set font size like this
+
+```html
+<html>
+    <head>
+        <title>
+            A test
+        </title>
+        <style>
+            .fontTem{
+                font-size: 18px;
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <p>
+                This is text with default size and color.
+            </p>
+            <p class = 'fontTem'>
+                This is text with specified size and color.
+            </p>
+        </div>
+    </body>
+</html>
+```
+
+Besides pixcel, we can use these words to control the font size
+
+| | | | |
+| --- | --- | --- | --- |
+| `xx-small` | `x-small` | `small` | `medium` |
+| `large` | `x-large` | `xx-large` | |
+
+### 4.2 Font Weight
+
+We can control font's weight like this
+
+```html
+<style>
+    .fontTem{
+        font-weight: 200;
+    }
+</style>
+```
+
+The value usually ranges from 100 - 1000, and can be also set by some words.
+
+| | | |
+| --- | --- | --- |
+| `lighter` | `light` | `normal` |
+| `bold` | `bolder` | |
+
+### 4.3 Font Family
+
+We can change the font family like this
+
+```html
+<style>
+    .fontTem{
+        font-family: "Microsoft Yahei";
+    }
+</style>
+```
+
+Notice that only the users having the font installed in their computer can see the font like you. We can set multiple font family in the same time so that if the front font is missing, the latter one will be used instead. For example
+
+```html
+<style>
+    .fontTem{
+        font-family: "Microsoft Yahei", "Times New Roman", "Arial";
+    }
+</style>
+```
+
+Notice that if chinese characters are used in `html`, it's better to add this command in `head`
+
+```html
+<head>
+    <meta charset="utf-8">
+</head>
+```
+
+By the way, we can navigate the fonts installed in our computer by the command in control panel
+
+```bash
+fc-list >> font.txt
+```
+
+TODO: embedded font
+
+### 4.4 Line Height
+
+TODO: line height
+
+### 4.5 Font Style
+
+Italic style is an important property for a font. We can use a font's italic style like this
+
+```html
+<style>
+    .fontTem{
+        font-style: italic;
+    }
+</style>
+```
+
+But not all fonts have italic style. Another way to make fonts oblique in force is like this
+
+```html
+<style>
+    .fontTem{
+        font-style: oblique;
+    }
+</style>
+```
+
+### 4.6 Font Variant
+
+Font variant has a value which can make capital letter smaller. For example
+
+```html
+<style>
+    .fontTem{
+        font-variant: small-caps;
+    }
+</style>
+```
+
+Finally, we can write all the properties above simply like this
+
+```html
+<style>
+    .fontTem{
+        font: arial bold italic small-caps 20px/50px;
+    }
+</style>
+```
+
+The first number in `20px/50px` is the font size and the second is line height. And other properties has no strict order.
+
+## 5 Position
+
+For a web page, we can regard it as a flow consist of one element to another. Defaultly, elements are set position to try them best to fill the whole page. In *3.2 Float*, We have learned how to change the flow from vertical to horizontal. Now we will set one element's position as we want.
+
+### 5.1 Relative Position
+
+A block element's relative position is relative to **its original position**. For instance
+
+```html
+<html>
+    <head>
+        <title>
+            A test
+        </title>
+        <style>
+            .divTem{
+                height: 200px;
+                width: 200px;
+                float: left;
+            }
+            .positionTem{
+                height: 200px;
+                width: 200px;
+                float: left;
+                position: relative;
+                top: 50px;
+                left: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class = 'positionTem'></div>
+        <div class = 'divTem'></div>
+    </body>
+</html>
+```
+
+Notice that we can choose only one property from `top` and `bottom`, `left` and `right`.
+
+### 5.2 Absolute Position
+
+Absolute position is the position relative **the closest father element**. If all the father elements have no position set, it will be relative to the `html` element.
+
+In addition, if a element has an absolute position, it will be popped out from the standard flow of the web page. In other words, it has no influence on all the elements after it when aligning. For instance
+
+```html
+<html>
+    <head>
+        <title>
+            A test
+        </title>
+        <style>
+            .divTem{
+                height: 200px;
+                width: 200px;
+                float: left;
+            }
+            .positionTem{
+                height: 200px;
+                width: 200px;
+                background: red;
+                float: left;
+                position: absolute;
+                top: 50px;
+                left: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class = 'positionTem'></div>
+        <div class = 'divTem'></div>
+    </body>
+</html>
+```
+
+### 5.3 Fixed Position
+
+A element with fixed position will hold it place in a page when slide down or up. The position is only relative to the page.
+
+```html
+<html>
+    <head>
+        <title>
+            A test
+        </title>
+        <style>
+            .positionTem{
+                height: 200px;
+                width: 200px;
+                position: fixed;
+                background: red;
+                float: left;
+                top: 50px;
+                left: 50px;
+            }
+        </style>
+    </head>
+    <body style="height = 1000px">
+        <div class = 'positionTem'></div>
+        <div class = 'divTem'></div>
+    </body>
+</html>
+```
+
+### 5.4 Inherit Position
+
+We can inherit the father element' position like this
+
+```html
+<html>
+    <head>
+        <title>
+            A test
+        </title>
+        <style>
+            .positionFatherTem{
+                height: 200px;
+                width: 200px;
+                position: fixed;
+                background: red;
+                top: 0;
+                left: 0;
+            }
+            .positionChildTem{
+                height: 100px;
+                width: 100px;
+                position: inherit;
+                background: green;
+                top: 0;
+                left: 200px;
+            }
+        </style>
+    </head>
+    <body style="height = 1000px">
+        <div class = 'positionTem'></div>
+        <div class = 'divTem'></div>
+    </body>
+</html>
+```
+
+### 6 Display
+
+The property `display` can control the elemrnt whether to display on the page. For example
+
+```html
+<html>
+    <head>
+        <title>
+            A test
+        </title>
+        <style>
+            .displayTem{
+                height: 200px;
+                width: 200px;
+                background: red;
+                float: left;
+                display: none;
+            }
+            .divTem{
+                height: 200px;
+                width: 200px;
+                background: blue;
+                float: left;
+            }
+        </style>
+    </head>
+    <body>
+        <div class = 'displayTem'></div>
+        <div class = 'divTem'></div>
+    </body>
+</html>
+```
+
+Another function of `display` is that it can change inline elements into block elements and vice versa. For instance
+
+```html
+<html>
+    <head>
+        <title>
+            A test
+        </title>
+        <style>
+            .displayBlockTem{
+                height: 200px;
+                width: 200px;
+                background: red;
+                display: block;
+            }
+            .displayInlineTem{
+                height: 200px;
+                width: 200px;
+                background: blue;
+                display: inline;
+            }
+        </style>
+    </head>
+    <body>
+        <div class = 'displayInlineTem'>test</div>
+        <span class = 'displayBlockTem'>test</span>
+    </body>
+</html>
+```
+
+The parameter `inline-block` will give the element the characteristics from both inline and block element.
+
+```html
+<html>
+    <head>
+        <title>
+            A test
+        </title>
+        <style>
+            .displayTem{
+                height: 200px;
+                width: 200px;
+                background: red;
+                float: left;
+                display: inline-block;
+            }
+        </style>
+    </head>
+    <body>
+        <div class = 'displayTem'>Test</div>
+        <span class = 'displayTem'>Test</span>
+    </body>
+</html>
+```
+
+## 7 Relative Unit
+
+In front, we have learned to use pixcel as our length unit which is an absolute unit. We can use `%` as a relative unit which means the element how much long as the closest father element. For instance
+
+```html
+<html>
+    <head>
+        <title>
+            A test
+        </title>
+        <style>
+            *{margin: 0; padding: 0;}
+            body, html{height: 100%}
+            .relativeTem{
+                height: 50%;
+                width: 50%;
+                background: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div class = 'relativeTem'>
+            <div class = 'relativeTem'>
+            </div>
+        </div>
+    </body>
+</html>
+```
