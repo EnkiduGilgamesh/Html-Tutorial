@@ -9,6 +9,8 @@
   - [3 Properties](#3-properties)
     - [3.1 Margin and Padding](#31-margin-and-padding)
     - [3.2 float](#32-float)
+    - [3.3 border](#33-border)
+    - [3.4 background](#34-background)
 
 ## 1 Introduce
 
@@ -322,3 +324,130 @@ A block element's width is defaultly defined 100% as wide as a web page. So a bl
     </body>
 </html>
 ```
+
+For inline element, such as `a`, `span` etc. **we cannnot set height and width for them**. The height and width for them vary with its environment.
+
+### 3.3 border
+
+Property `border` is used to set the element's border.
+
+```html
+<html>
+    <head>
+        <title>
+            A test
+        </title>
+        <style>
+            .borderTem{
+                border-width: 10px;
+                border-style: solid;
+                border-color: red;
+            }
+            .styleTem{
+                height: 100px;
+                width: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class = 'styleTem borderTem'>Test</div>
+    </body>
+</html>
+```
+
+We can simplify it like this
+
+```html
+<style>
+    .borderTem{
+        border: 10px solid red;
+    }
+<style>
+```
+
+Or we can set border in different directions respectively. For example
+
+```html
+<style>
+    .borderTem{
+        border: 10px solid red;
+        border-right-width: 20px;
+        border-top-style: dashed;
+        border-bottom-color: blue;
+    }
+    .borderTem2{
+        border: 10px solid red;
+        border-left: 20px dashed blue;
+    }
+<style>
+```
+
+### 3.4 background
+
+We actually have used `background` to set an element's background's color. But it has more options.
+
+We can set an element's background with an image like this
+
+```html
+<html>
+    <head>
+        <title>
+            A test
+        </title>
+        <style>
+            .imageTem{
+                height: 190px;
+                width: 100px;
+                background-image: url(1.jpg);
+            }
+        </style>
+    </head>
+    <body>
+        <div class = 'imageTem'>Test</div>
+    </body>
+</html>
+```
+
+If the image's size is not suit the `div`'s size, we can reset the image's size like this
+
+```html
+<style>
+.imageTem{
+    width: 190px;
+    height: 100px;
+    background-image: url(1.jpg);
+    background-size: 190px 100px;
+}
+</style>
+```
+
+If the image is smaller, the image will be defaultly repeatedly put in the `div`. We can change the behavior like this
+
+```html
+<style>
+.imageTem{
+    width: 1900px;
+    height: 1000px;
+    background-image: url(1.jpg);
+    background-size: 190px 100px;
+    background-repeat: no-repeat;
+}
+</style>
+```
+
+The parameter `repeat-x` means the image will repeat horizontally, while the parameter `repeat-y` means the image will repeat vertically.
+
+We can also control the position the image appear in the `div`.
+
+```html
+<style>
+.imageTem{
+    width: 1900px;
+    height: 1000px;
+    background-image: url(1.jpg);
+    background-size: 190px 100px;
+    background-position: 200px 200px;
+</style>
+```
+
+The property has tow parameter with the second one controlling the y axis and default being set `center`.

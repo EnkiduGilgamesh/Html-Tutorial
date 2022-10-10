@@ -1,5 +1,22 @@
 # HTML
 
+- [HTML](#html)
+  - [1 Introduction](#1-introduction)
+  - [2 Tag and Text](#2-tag-and-text)
+  - [2 DOCTYPE Declaration](#2-doctype-declaration)
+  - [3 Start with a Example](#3-start-with-a-example)
+  - [4 Comment](#4-comment)
+  - [5 Heading](#5-heading)
+  - [6 Div](#6-div)
+  - [7 Paragraph](#7-paragraph)
+  - [8 Text Format](#8-text-format)
+  - [9 Image](#9-image)
+  - [10 Url](#10-url)
+  - [11 Title](#11-title)
+  - [12 Enumerate](#12-enumerate)
+  - [13 Table](#13-table)
+  - [14 Form](#14-form)
+
 ## 1 Introduction
 
 HTML is a kind of *Markup Language* whose full name is **HyperText Markup Language**.
@@ -9,8 +26,8 @@ It should be noticed that HTML is not a compiling language, therefore it should 
 
 HTML could be simply divided into two hands in which there are tags and text.
 
-* Tags are series of names to tell which kinds of stuff you are about putting into your web;
-* Text are the words you are about putting into your web.
+- Tags are series of names to tell which kinds of stuff you are about putting into your web;
+- Text are the words you are about putting into your web.
 
 In HTML, tags are denoted by tag's name and the surrounding symbol `<` and `>`
 Every element in HTML is consist of head tag and foot tag. For instance
@@ -283,4 +300,3 @@ We can submit what we input in `form` by a `submit` button. For instance
 The `action` means what the server would do to the data you submit, and the `method` means the method the data submit to the server. Generately, it has two choice to choose, `get` and `post`.
 
 You can navigate [Html Form(Chinese)](https://www.runoob.com/html/html-forms.html) for more element used in `form`.
-

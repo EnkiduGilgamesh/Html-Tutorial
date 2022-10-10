@@ -5,7 +5,7 @@ Created Date: Saturday Oct 1st 2022, 5:04:03 pm
 Author: Wenren Muyan
 Comments: 
 --------------------------------------------------------------------------------
-Last Modified: 5/10/2022 10:48:49
+Last Modified: 9/10/2022 04:36:19
 Modified By: Wenren Muyan
 --------------------------------------------------------------------------------
 Copyright (c) 2022 - future Wenren Muyan
@@ -45,11 +45,33 @@ Date				By				Comments
                 padding-bottom: 10px;
                 padding-left: 10px;
             }
+            .borderTem{
+                border-width: 10px;
+                border-style: solid;
+                border-color: red;
+            }
+            .borderTem2{
+                border: 10px solid red;
+                border-right-width: 20px;
+                border-top-style: dashed;
+                border-bottom-color: blue;
+            }
+            
+            .imageTem{
+                width: 1900px;
+                height: 1000px;
+                background-image: url(1.jpg);
+                background-size: 190px 100px;
+                background-position: 500px 200px;
+                background-repeat: no-repeat;
+            }
         </style>
+        <!-- background-repeat: repeat-x; -->
     </head>
     <body>
         <div >Test</div>
         <div id = 'style_ID' class = 'Padding'>Test</div>
-        <div class = 'style_class Margin'>Test</div>
+        <div class = 'style_class Margin borderTem2'>Test</div>
+        <div class = "imageTem"></div>
     </body>
 </html>
