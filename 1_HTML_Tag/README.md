@@ -106,6 +106,8 @@ The tag `<div>` means one row's content. For example
 <div>The second row.</div>
 ```
 
+The `div` is the most widely used block element. Another kind of element is inline element. These 
+
 ## 7 Paragraph
 
 The tag `<p>` means paragraph. The difference between `<div>` and `<p>` is that the paragraph will generate a greater distance between two paragraphs. It is more usually used in writing.
